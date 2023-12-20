@@ -62,16 +62,16 @@ const SeconComponent = () => {
   const justRef = useRef(null);
   const secondStore = createStore(Reducer);
   secondStore.subscribe(() => {
-    let sth = secondStore.getState();
+    let sth = secondStore.getState().value;
     justRef.current.textContent = sth;
   });
-  const add = () => {
+  const handleAdd = () => {
     secondStore.dispatch(add());
   };
   return (
     <Container>
       <span ref={justRef}>0</span>
-      <button onClick={add}>Add</button>
+      <button onClick={handleAdd}>Add</button>
     </Container>
   );
 };
