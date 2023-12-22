@@ -6,10 +6,10 @@ import Container from "./UI/Container";
 
 const Statemanagment = () => {
   return (
-    <div>
+    <Container className={'mx-10 text-indigo-500'}>
       <FirstComponent />
       <SeconComponent />
-    </div>
+    </Container>
   );
 };
 
@@ -62,16 +62,16 @@ const SeconComponent = () => {
   const justRef = useRef(null);
   const secondStore = createStore(Reducer);
   secondStore.subscribe(() => {
-    let sth = secondStore.getState().value;
+    let sth = secondStore.getState().value + ' ' + secondStore.getState().nameOfThing;
     justRef.current.textContent = sth;
   });
   const handleAdd = () => {
     secondStore.dispatch(add());
   };
   return (
-    <Container>
+    <div>
       <span ref={justRef}>0</span>
       <button onClick={handleAdd}>Add</button>
-    </Container>
+    </div>
   );
 };
