@@ -9,6 +9,7 @@ import Welcome from "./Components/Welcome";
 import Container from "./Components/UI/Container";
 
 function App() {
+//I'm creating e-commerce using mern stack, can anybody help me
   return (
     <Router>
       <div className="App">
