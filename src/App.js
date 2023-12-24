@@ -10,6 +10,7 @@ import Container from "./Components/UI/Container";
 
 function App() {
 //I'm creating e-commerce using mern stack, can anybody help me
+//actaully It's to hard, mern stack ahh
   return (
     <Router>
       <div className="App">
